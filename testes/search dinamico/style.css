@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    padding: 10px;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: sticky;
+    bottom: 0;
+    left: 0;
+
+    height: 70px;
+
+    margin-bottom: 10px;
+
+    
+}
+
+.menu > div{
+    max-width: 400px;
+    width: 100%;
+    
+    border-radius: 10px;
+    border: none;
+
+    padding: 10px;
+    
+    position: relative;
+
+    outline: none;
+}
+.menu input{
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 2px rgba(0,0,0,.2);
+}
+.menu div .apagarpesquisarSite{
+    
+    width: 25px;
+    height: 25px;
+    
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.artigo{    
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.container-artigos{
+    margin-bottom: 2000px;
+}
+
+.titulo-noticia > div:first-child{
+    color: #1A0DAB;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.titulo-noticia > div:last-child{
+    color: #006621;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.descricao-noticia{
+    font-size: 14px;
+    text-align: justify;
+}

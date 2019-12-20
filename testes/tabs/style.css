@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 20px;
+}
+
+.container-tabs{
+    overflow-X: auto;
+}
+    .tabs{
+        display: flex;
+    }
+        .tab{
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+        }
+
+        .tab-ativa{
+            background-color: #f1f1f1;
+            animation: show .5s forwards;
+        }
+
+    .conteudo-tab{
+        display: block;
+        min-width: 600px;
+        min-height: 600px;
+        padding: 10px;
+        
+        border-radius: 15px;
+        border-top-left-radius: 0;
+
+        background-color: #f1f1f1;
+    }
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0, 0);
+  }
+}
+    

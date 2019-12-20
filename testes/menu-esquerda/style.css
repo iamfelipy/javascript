@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-left-responsivo{
+    display: none;
+    
+    background-color: black;
+    border-right: 5px solid black;
+
+    color: rgb(200, 151, 255);
+}
+
+.menu-left-responsivo > div {
+    padding-top: 10px;
+}
+
+.menu-left-responsivo .imagem-usuario-mais-nome-logado{
+
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.menu-left-responsivo div .imagem-usuario-mais-nome-logado .imagem-usuario-logado{
+    width: 120px;
+    height: 120px;
+    
+    display: inline-block;
+
+    border-radius: 50%;
+
+    margin-bottom: 20px;
+
+    background-color: white;
+}
+.menu-left-responsivo div .imagem-usuario-mais-nome-logado .nome-logado{
+    text-align: center;
+    color: white;
+}
+.menu-left-responsivo div .opcoes-menu > div{
+    padding: 10px;
+    background-color: white;
+    color: black;
+    margin-bottom: 10px;
+    transition: all 1s;
+}
+.menu-left-responsivo div .opcoes-menu > div:hover{
+    background-color: cyan;
+}
+.menu-esquerdo-desativado{
+    display: block;
+    animation: menuEsquerdoDesativado 1s forwards;
+}
+    @keyframes menuEsquerdoDesativado{
+        from{
+            
+            width: 410px;
+        }
+        to{
+            
+            width: 0;
+            padding-left: 0;
+            padding-right: 0;
+            border-right: none; 
+        }
+    }
+
+.menu-esquerdo-ativo{
+    display: block;
+    animation: menuEsquerdoAtivo 1s forwards;
+}
+    @keyframes menuEsquerdoAtivo{
+        from{ 
+            
+            width: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        to{
+            
+            width: 410px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    
+.aside-header-main-footer{
+    width: 100%;
+    padding: 10px;
+
+    background-color: #62ff00;
+}
+
+    .header{
+        padding: 10px;
+        margin-bottom: 10px;
+
+        background-color: black;
+        color: white;
+    }
+    .main{
+        min-height: 2000px;
+        margin-bottom: 10px;
+
+        padding: 10px;
+
+        background-color: black;
+        color: white;
+    }
+    .footer{
+        min-height: 50px;
+
+        padding: 10px;
+
+        background-color: black;
+        color: white;
+    }

@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body{
+    padding: 20px;
+}
+
+.container-accordions{
+    display: block;
+    padding: 10px;
+    background-color: rgb(145, 145, 255);
+}
+    .container-accordions .accordion{
+        display: block;
+    }
+        .container-accordions .accordion .titulo{
+            background-color: rgb(255, 160, 0);
+            padding: 5px;
+            border-top: 2px solid white;
+        }
+
+        .container-accordions .accordion .conteudo{
+            padding: 15px 10px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(187, 187, 187);
+            text-align: justify;
+        }
+
+
+    .js .js-container-accordions .conteudo{
+        display: none;
+    }
+        .js .js-container-accordions .js-accordion-ativo .conteudo{
+            display: block;
+            animation: accordionAbrir 1.5s forwards;
+        }
+
+        @keyframes accordionAbrir {
+            from {
+                opacity: 0;
+                max-height: 0;
+            }
+            to {
+                opacity: 1;
+                max-height: 300px;
+            }
+        }
+
+    
+    

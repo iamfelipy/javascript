@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 2000px;
+    padding-top: 1000px;
+}
+
+.titulo{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+    min-height: 50px;
+    margin-bottom: 10px;
+
+    background-color: red;
+}
+.apresentação-vantagens{
+    background-color: rgb(255, 205, 43);
+}
+.apresentação-vantagens:before{
+    background-color: rgb(255, 205, 43);
+    padding-bottom: 1000px;
+}
+.container-vantagem{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+    margin-bottom: 10px;
+    overflow-X: hidden;
+}
+    .container-vantagem > div{
+        flex: 50%;
+        padding: 15px;
+    }
+    .container-vantagem .icone-vantagem{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 200px;
+    }
+        .js .js-icone-vantagem-ativo{
+            animation: vantagemIcon 1.5s forwards;
+        }
+            .js .js-icone-vantagem-desativado{
+                animation: vantagemIconStatusOriginal 1.5s forwards;
+            }
+        .container-vantagem .icone-vantagem > div{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+    .container-vantagem > .descricao-vantagem{
+        background-color: red;  
+        
+    }
+        .js .js-descricao-vantagem-ativo{
+            animation: vantagemDescricao 1.5s forwards;
+        }
+            .js .js-descricao-vantagem-desativado{
+                animation: vantagemDescricaoStatusOriginal 1.5s forwards;
+            }
+            
+@keyframes vantagemIcon{
+    from{
+        transform: translate3d(-2000px, 0, 0);
+    }to{
+        transform: translate3d(0, 0, 0);
+    }
+}
+    @keyframes vantagemIconStatusOriginal{
+        from{
+            transform: translate3d(0, 0, 0);
+        }to{
+            transform: translate3d(-2000px, 0, 0);
+        }
+    }
+@keyframes vantagemDescricao{
+    from{
+        transform: translate3d(2000px, 0, 0);
+    }to{
+        transform: translate3d(0, 0, 0);
+    }
+}
+    @keyframes vantagemDescricaoStatusOriginal{
+        from{
+            transform: translate3d(0, 0, 0);
+        }to{
+            transform: translate3d(2000px, 0, 0);
+        }
+    }
+@media only screen and (max-width: 800px) {
+    .container-vantagem{
+        display: block;
+    }
+        .container-vantagem > div{
+            width: 100%;
+        }
+        .container-vantagem .icone-vantagem{
+            justify-content: center;   
+            padding-right: 0px;
+        }
+}

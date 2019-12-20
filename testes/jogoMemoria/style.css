@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.container-game{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: black;    
+}
+
+.card{
+    width: 150px;
+    height: 200px;
+
+    margin: 10px;
+    
+    border-radius: 5px;
+
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: center;
+    background-image: url('Street_Fighter_Logo.png');
+    background-color: white;
+    
+}
+
+.click-card-mostra-verso{
+    animation: mostraVersoCard 3s forwards;
+}
+
+.click-card-mostra-frente{
+    animation: mostraFrenteCard 3s forwards;
+}
+
+@keyframes mostraVersoCard{
+    from{
+        transform: rotate3d(0,1,0,0deg);
+    }
+    to{
+        transform: rotate3d(0,1,0,180deg);
+    }
+}
+
+@keyframes mostraFrenteCard{
+    from{
+        transform: rotate3d(0,1,0,180deg);
+    }
+    to{
+        transform: rotate3d(0,1,0,0deg);
+    }
+}
+
+/* 
+    https://feededigno.com.br/listas/street-fighter-os-20-personagens-mais-fortes-da-franquia/
+    https://www.html5rocks.com/pt/tutorials/file/dndfiles/ 
+    https://konvajs.org/docs/select_and_transform/Transform_Events.html
+*/

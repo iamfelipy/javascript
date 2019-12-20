@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.triangulo-esquerdo{
+    background-color: red;
+    display: none;
+}
+
+.container-jogo-da-velha{
+    height: 100vh;
+    display: flex;
+
+    padding: 10px;
+
+    
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: black;
+}
+
+.vencedor-panel{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.vencedor-panel img[src='coroa.gif']{
+    display: none;
+    margin-bottom: -35px;
+}
+
+.jogadorVsjogador{
+ color: white;   
+ font-size: 2rem;
+}
+
+.jogador1{
+    color: #85ff00;
+    font-size: 2rem;
+}
+
+.jogador2{
+    color: #00ffdc;
+    font-size: 2rem;
+}
+
+.tabuleiro{
+    max-width: 320px;
+    max-height: 320px;
+}
+
+.tabuleiro-linha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabuleiro-linha-posicoes{
+    height: 80px;
+    width: 80px;
+
+    margin: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #5656569e;
+    
+    font-size: 3rem;
+
+    cursor: pointer;
+}
+.tabuleiro-linha-posicoes{
+    -webkit-tap-highlight-color: transparent;
+}
+.tabuleiro-linha-posicoes-ativo-jogador1{
+    animation: efeitoClicarPosicaoJogador1 1.5s forwards;
+}
+.tabuleiro-linha-posicoes-ativo-jogador2{
+    animation: efeitoClicarPosicaoJogador2 1.5s forwards;
+}
+.tabuleiro-linha-vencedora-jogador1{
+    animation: efeitoLinhaVencedoraJogador1 2s infinite;
+}
+.tabuleiro-linha-vencedora-jogador2{
+    animation: efeitoLinhaVencedoraJogador2 2s infinite;
+}
+
+@keyframes efeitoClicarPosicaoJogador1{
+    from{
+        color: black;
+    }
+    to{
+        background-color: #380000;
+        color: #85ff00;
+    }
+}
+
+@keyframes efeitoClicarPosicaoJogador2{
+    from{
+        color: black;
+    }
+    to{
+        background-color: #380000;
+        color: #00ffdc;
+    }
+}
+
+@keyframes efeitoLinhaVencedoraJogador1{
+    from{
+        background-color: black;
+    }
+    to{
+        background-color: #85ff00;
+    }
+}
+
+@keyframes efeitoLinhaVencedoraJogador2{
+    from{
+        background-color: black;
+    }
+    to{
+        background-color: #00ffdc;
+    }
+}
+

@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    padding: 20px;
+}
+
+.tabela-produtos{
+    width: 100%;
+    text-align: left;
+    border-radius: 4px 4px 0 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.tabela-titulo-coluna-icon-ordenar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.titulo-coluna{
+    margin-right: 5px;
+}
+
+.icon-ordenar{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.reordenar-crescente{
+    width: 10px;
+    height: 5px;
+    background-image: url('./assets/imagens/icon-sem-ordenar-crescente.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+.reordenar-decrescente{
+    width: 10px;
+    height: 5px;
+    background-image: url('./assets/imagens/icon-sem-ordenar-decrescente.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.linha-dado{
+    animation: trShowDelay 2s forwards;
+}
+
+@keyframes trShowDelay{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+    
