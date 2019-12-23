@@ -39,7 +39,6 @@
     TolocaleString
 
     mais o menos confiante:
-    replace()
     concat()
     
     não confiante:
@@ -81,9 +80,10 @@ console.log('--------------------------------')
 console.log('--------------------------------')
 console.log('toFixed');
 let preco = 1299.326
+console.log( preco );
 console.log( preco.toFixed() );
-console.log( preco.toFixed(2).replace('.', ',') );
-console.log( preco.toFixed(3) );
+console.log( preco.toFixed(2) );
+console.log( preco.toFixed(3).replace('.', ',') );
 console.log('--------------------------------')
 
 // toString()
@@ -130,7 +130,8 @@ console.log('--------------------------------')
 // Math.max() retorna o maior 
 console.log('--------------------------------')
 console.log('Math.max()');
-console.log( Math.max(5,2,3,32,111,2,0.5,1222.22) );
+let teste = [5,2,3,32,111,2,0.5,12.22];
+console.log( Math.max(...teste) );
 console.log('--------------------------------')
 
 // Math.min() retorna o menor
@@ -145,6 +146,7 @@ let max = 100;
 let min = 30
 console.log('Math.random()');
 console.log( (Math.random() * 100).toFixed(0) );
+console.log( Math.floor(Math.random() * ( max + 1 )));
 console.log( Math.floor((Math.random() * ( max - min + 1 ) + min)) );
 console.log('--------------------------------')
 
@@ -176,7 +178,7 @@ const listaPrecos = ['R$ 5100123139,99', ' R$ 100,222',
 
 function limpaArredondaRetornaSomaTotal(){
     let numbersLimpos = listaPrecos.map( elemento => Number( elemento.toUpperCase().replace('R$', '').trim().replace(',', '.') ) );
-    numbersLimpos = numbersLimpos.reduce( (a,b) => a + b );
+    numbersLimpos = numbersLimpos.reduce( (accumulator,b) => accumulator + b );
     console.log( numbersLimpos.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL' }) );
 }
 

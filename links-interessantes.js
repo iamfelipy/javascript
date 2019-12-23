@@ -14,5 +14,7 @@ https://www.slideshare.net/sweekson/practical-javascript-programming-session-48
 https://github.com/braziljs/eloquente-javascript
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guid
 https://js.checkio.org/
+https://www.hackerrank.com/
+https://www.codewars.com/
 
 

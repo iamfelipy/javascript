@@ -9,7 +9,7 @@
     [].map( callback(itemAtual, index, array) => { }) )  return new array
     [].reduce( callback(acumulador, valorAtual, index, array) => { }), valorInicial ) return accumulator
     [].reduceRight( callback(acumulador, valorAtual, index, array) => { }), valorInicial ) return accumulator
-    [].some( callback(valorAtual) => { condicao } ) ) return boolean
+    [].some( callback(valorAtual) => { condicao } ) ) return boolean 
     [].every( callback(valorAtual) => { condicao } ) ) return boolean
     [].find( callback(valorAtual) => { condicao } ) retorna valor
     [].findIndex( callback(valorAtual) => { condicao } ) retorna index
@@ -108,7 +108,7 @@ console.log('retorno every:');
 console.log(dds.every( dd => dd === 47 ) );
 console.log('--------------------------------');
 
-// [].find() se algum valor for true para interação ele retorna valor
+// [].find() se algum valor for true para interação ele retorna o primeiro valor
 console.log('--------------------------------');
 console.log('[].find()');
 let teste4 = [3,1,5,2];
@@ -116,10 +116,10 @@ console.log('retorno find:');
 console.log(teste4.find( valor => valor === 5 ) );
 console.log('--------------------------------');
 
-// [].findIndex() se algum valor for true para interação ele retorna index do valor
+// [].findIndex() se algum valor for true para interação ele retorna index do primeiro valor
 console.log('--------------------------------');
 console.log('[].findIndex()');
-let teste5 = [3,1,5,2];
+let teste5 = [3,1,5,2,1];
 console.log('retorno findIndex:'); 
 console.log(teste5.findIndex( valor => valor === 1 ) );
 console.log('--------------------------------');
@@ -134,7 +134,7 @@ console.log(teste6.filter( elemento => {if( elemento ){if( elemento.length > 4 )
 console.log('--------------------------------');
 
 
-console.clear();
+
 
 //exercises
 

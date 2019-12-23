@@ -12,7 +12,7 @@
     split()
     join()
     slice()
-    substr
+    substr()
     toLowerCase()
     toUpperCase()
     startWith()
@@ -98,7 +98,7 @@ console.log('--------------------------------');
 // charAt, case sensitive, não modifica string
 console.log('--------------------------------');
 console.log('charAt');
-console.log( 'teste'.charAt('s') );
+console.log( 'teste'.charAt(2) );
 console.log('--------------------------------');
 
 // concat(str2, str3, ...), não modifica string
@@ -131,13 +131,13 @@ console.log('substring');
 console.log( 'Laranja'.substring(3) );
 console.log('--------------------------------');
 
-// padStart(start, end) case sensitive, não modifica string
+// padStart(start, '-') case sensitive, não modifica string
 console.log('--------------------------------');
 console.log('padStart');
 console.log( 'Meu nome é felipy'.padStart(10, '-') );
 console.log('--------------------------------');
 
-// padEnd(start, end) case sensitive, não modifica string
+// padEnd(start, '.') case sensitive, não modifica string
 console.log('--------------------------------');
 console.log('padEnd');
 console.log( 'Meu nome é felipy'.padEnd(5, '-') );

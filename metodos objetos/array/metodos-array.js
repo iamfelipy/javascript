@@ -9,12 +9,12 @@
 
     métodos nativos do objeto:
     
-    Array.from()
-    Array.isArray()
+    Array.from() //transforma array-life em array para poder usar métodos
+    Array.isArray() //verifica se é um array
 
-    Array.of() // [5]
-    new Array() // [empty * 5]
-    Array() // [empty * 5]
+    Array.of(5) // [5] 
+    new Array(5) // [empty * 5]
+    Array(5) // [empty * 5]
 
     Métodos do prototype:
         
@@ -217,7 +217,7 @@
 
 //exercicios
 
-console.clear();
+
 
 const comidas = ['Pizza', 'Frango', 'Carne', 'Macarrão'];
 // Remova o primeiro valor de comidas e coloque em uma variável
