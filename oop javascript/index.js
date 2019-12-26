@@ -6,7 +6,11 @@ function Pessoa( nome, idade, sexo, interesses ){
     this.idade = idade;
     this.sexo = sexo;
     this.interesses = interesses;
-    this.bio = function(){
+}
+
+Pessoa.prototype = {
+    constructor: Pessoa,
+    bio(){
         console.log('----------------------------------------------');
         console.log('              Meus dados                        ');
         console.log(`Nome: ${this.nome}.`);
@@ -16,15 +20,15 @@ function Pessoa( nome, idade, sexo, interesses ){
         // console.log(`  Musicas: ${this.interesses.musicas[0]}`);
         // console.log(`  Jogos: ${this.interesses.jogos[0]}`);
         console.log('----------------------------------------------');
-    };
-    this.apresentacao = function (){
+    },
+    apresentacao(){
         console.log('----------------------------------------------');
         console.log(`Oi, sou o ${this.nome}`);
         console.log('----------------------------------------------');
-    }
-    this.teste = function(){
+    },
+    teste(){
         console.log('teste');
-    }
+    },
 }
 
 function Aluno(nome, idade, sexo){
@@ -33,6 +37,7 @@ function Aluno(nome, idade, sexo){
         console.log(`Yoyo. Meu nome é ${this.nome}.`);
     }
 }Aluno.prototype = Pessoa.prototype;
+
 
 function Professor(nome, idade, sexo, subject){
     Pessoa.call(this, nome, idade, sexo);

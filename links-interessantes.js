@@ -16,5 +16,6 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guid
 https://js.checkio.org/
 https://www.hackerrank.com/
 https://www.codewars.com/
+https://tableless.com.br/primeiros-passos-fullstack-javascript/
 
 

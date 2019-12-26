@@ -12,6 +12,7 @@
     function.call(this, arg1, arg2, arg3); executa a função com o this modificado
     function.apply(this, [arg1, arg2, arg3]); executa a função mandando os argumentos em formatado spread
     function.bind(this, arg1, arg2, arg3); retorna uma nova função com this modificado o argumentos mandados são similiares ao call 
+    funcion.prototype
 
 */
 
