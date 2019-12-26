@@ -1,0 +1,22 @@
+body > .molde-tarefa{
+    display: none;
+} 
+.container-tarefas{
+    padding: 10px;
+    .container-tarefa-botao-excluir-editar{
+        display: flex;
+        justify-content: space-between;
+        background-color: greenyellow;
+        margin-bottom: 10px;
+        .container-tarefa{
+            background-color: red;
+            width: 50%;
+        }
+        .container-tarefa-botao-excluir-editar{
+            background-color: yellow;
+            display: flex;
+            justify-content: space-center; 
+            width: 50%;
+        }
+    }
+}

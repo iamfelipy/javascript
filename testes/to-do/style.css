@@ -1,0 +1,35 @@
+body > .molde-tarefa {
+  display: none;
+}
+
+.container-tarefas {
+  padding: 10px;
+}
+
+.container-tarefas .container-tarefa-botao-excluir-editar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: greenyellow;
+  margin-bottom: 10px;
+}
+
+.container-tarefas .container-tarefa-botao-excluir-editar .container-tarefa {
+  background-color: red;
+  width: 50%;
+}
+
+.container-tarefas .container-tarefa-botao-excluir-editar .container-tarefa-botao-excluir-editar {
+  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-center;
+      -ms-flex-pack: space-center;
+          justify-content: space-center;
+  width: 50%;
+}
+/*# sourceMappingURL=style.css.map */
