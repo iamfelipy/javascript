@@ -11,25 +11,35 @@
     </style>
 </head>
 <body>
-    <input type='text' id='input-adicionar-nova-tarefa'>
-    <button type='button' class='btn-adicionar-nova-tarefa'>+</button>
+    <div class='logo-to-do'>
+
+    </div>
+    <div style='text-align: center;'>
+        <div style='display: flex;'>
+            <input style='width: 100%;' type='text' id='input-adicionar-nova-tarefa'>
+        </div>
+        <div>
+            <button style='width: 100%;' type='button' class='btn-adicionar-nova-tarefa'>+</button>
+        </di>
+    </div>
+    <div class='container-selecionar-todas-tarefas'> <label for="selecionar-todas-tarefas"><input type="checkbox" name="">Selecionar todos</label> </div>
     <div class='container-tarefas'>
     </div>
     
     <div class='molde-tarefa'>
         <div class='container-tarefa-botao-excluir-editar'> 
+            <div><input type="checkbox" name=""></div>
             <div class='container-tarefa'></div>
-            <div class='container-tarefa-botao-excluir-editar' >
-                <div class='botaoExcluirTarefa'>
-                    excluir
-                </div>
-                <div class='botaoEditarTarefa'>
-                    editar
-                </div>
+            <div class='container-botao-excluir-editar' >
+                <div class='container-botao-editar'><i class='fas fa-edit'></i></div>
+                <div class='container-botao-excluir'><i class='fas fa-trash-alt'></i></div>
             </div>
         </div>
     </div>
+
+    <div class='excluir-tudo'>Excluir Selecionados</div>
     
     <script src='index.js'></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
