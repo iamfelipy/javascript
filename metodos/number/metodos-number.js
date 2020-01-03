@@ -38,10 +38,8 @@
     toString
     TolocaleString
 
-    mais o menos confiante:
-    concat()
     
-    não confiante:
+
     
 */
 
