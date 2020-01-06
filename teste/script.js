@@ -1,22 +1,34 @@
 // album com animal e descricao
 function initTabNav() {
-  const tabMenu = document.querySelectorAll('.js-tabmenu li');
-  const tabContent = document.querySelectorAll('.js-tabcontent section');
+  const tabMenu = document.querySelectorAll('[data-tab="menu"] li');
+  const tabContent = document.querySelectorAll('[data-tab="content"] section');
 
   if(tabMenu.length && tabContent.length) {
-    tabContent[0].classList.add('ativo');
+    
+    let min = 0;
+    let max = 1;
+    let classAleatoriaGerada = Math.floor(Math.random() * (max - min + 1)) + min;
+    let classe = ['show-down', 'show-right'];
+    tabContent[0].dataset.anime = classe[classAleatoriaGerada]; 
+    tabContent[0].classList.add('ativo', tabContent[0].dataset.anime);
 
     function activeTab(index) {
       tabContent.forEach((section) => {
         section.classList.remove('ativo');
+        section.classList.remove('show-down');
+        section.classList.remove('show-right');
       });
-      tabContent[index].classList.add('ativo');
+      tabContent[index].classList.add('ativo', tabContent[index].dataset.anime);
     }
 
     tabMenu.forEach((itemMenu, index) => {
       itemMenu.addEventListener('click', () => {
         activeTab(index);
       });
+      if( index != 0 ){
+        classAleatoriaGerada = Math.floor(Math.random() * (max - min + 1)) + min;
+        tabContent[index].dataset.anime = classe[classAleatoriaGerada]; 
+      }
     });
   }
 }
@@ -24,7 +36,7 @@ initTabNav();
 
 // adiciona efeito ao faq
 function initAccordion() {
-  const accordionList = document.querySelectorAll('.js-accordion dt');
+  const accordionList = document.querySelectorAll('[data-anime="accordion"] dt');
   const activeClass = 'ativo';
   
   if(accordionList.length) {
@@ -45,7 +57,7 @@ initAccordion();
 
 // adiciona scrollSuave ao clicar no link do menu e ir até o elemento
 function initScrollSuave() {
-  const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+  const linksInternos = document.querySelectorAll('[data-menu="suave"] a[href^="#"]');
 
   function scrollToSection(event) {
     event.preventDefault();
@@ -72,7 +84,7 @@ initScrollSuave();
 
 // anima elemento ao movimentar o scroll
 function initAnimacaoScroll() {
-  const sections = document.querySelectorAll('.js-scroll');
+  const sections = document.querySelectorAll('[data-anime="scroll"]');
   if(sections.length) {
     const windowMetade = window.innerHeight * 0.6;
 
@@ -120,7 +132,4 @@ function métodosInterface(){
 
 
 
-// Array.prototype.forEach.call(animaisDescricao.children, (item) => {
-//     item.setAttribute('data-anime', 'show-down');
-// });
 
