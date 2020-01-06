@@ -115,6 +115,7 @@ function métodosInterface(){
   // initAnimacaoScroll
   // anima elemento ao movimentar o scroll
   // ao retirar a classe ele volta ao normal usando transition que executa as propriedadas css de forma devagar
+  
 }
 
 
