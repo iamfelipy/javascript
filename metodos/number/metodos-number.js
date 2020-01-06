@@ -28,18 +28,6 @@
     Math.random()
 
     --------------------------------------------------------------
-
-    confiante:
-    Number.isNaN
-    Number.isInteger
-    Number.parseFloat
-    Number.parseInt
-    toFixed
-    toString
-    TolocaleString
-
-    
-
     
 */
 

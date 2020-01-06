@@ -38,6 +38,8 @@
         [].lastIndexOf()
         [].join()
         [].slice()
+        [].find()
+        [].findIndex()
     
     
     
@@ -46,6 +48,7 @@
 */
 
 // Array.from
+    // transformar array-link em array para poder acessar os metódos do Array.prototype
     console.log('--------------------------------')
     console.log('Array.from()');
     const head = document.head.children
@@ -73,9 +76,7 @@
     // Array.of()
     console.log('--------------------------------')
     console.log('Array.of()');
-    console.log( Array.of('teste', 1, () => {}, 'teste2') );
     console.log( Array.of(5) ); // [5]
-    console.log( [5] ); //[5]
     console.log('--------------------------------')
 
     // new Array

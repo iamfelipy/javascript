@@ -41,14 +41,15 @@
     retorna o prototype do objeto
 
     Object.is();
-    verifica se um objeto para outro
+    O método Object.is() determina se dois valores correspondem ao mesmo valor.
 
     Object.freeze();
     retorna o objeto bloqueado, só é possivel consultar
     Object.seal();
     retorna o objeto bloqueado, só é possivel consultar e alterar
     Object.preventExtensions();
-    retorna o objeto bloqueado, só é possivel consultar, alterar e deletar
+    O método Object.preventExtensions() impede que novas propriedades sejam adicionadas a um objeto.
+    pode-se alterar, consultar e deletar
     
 
     Object.isFrozen();
@@ -61,7 +62,7 @@
     verifica se a propriedade existe apenas, não consulta a cadeia de prototipos
     {}.propertyIsEnumerable()
     verifica se o enumerable is true
-    {}.prototype.isPrototypeOf();
+    {}.isPrototypeOf();
     verifica se o prototipo da origem é igual ao passado para a função isPrototypeOf()
     {}.toString()
 
@@ -90,7 +91,7 @@ console.log('--------------------------------');
 
 // Object.assign({},{})
 console.log('--------------------------------');
-console.log('Object.assign({}, {})');
+console.log('Object.assign(target, source)');
 
 const funcaoAutomovel = {
   acelerar(){
@@ -127,7 +128,7 @@ console.log('--------------------------------');
 
 // Object.defineProperties({}, define properties)
 console.log('--------------------------------');
-console.log('Object.defineProperties({})');
+console.log('Object.defineProperties()');
 const moto1 = {};
 
 console.log( moto1 );
@@ -151,7 +152,7 @@ console.log('--------------------------------');
 
 // Object.getOwnPropertyDescriptors({})
 console.log('--------------------------------');
-console.log('Object.getOwnPropertyDescriptors({})');
+console.log('Object.getOwnPropertyDescriptors()');
 const moto2 = {};
 
 console.log( moto2 );

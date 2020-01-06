@@ -139,6 +139,7 @@ function Pessoa(nome, idade){
  }
 
  Professor.prototype = Pessoa.prototype;
+ //apaguei o constructor
 
 
 let andre = new Professor('André', 29, 'Matemática');

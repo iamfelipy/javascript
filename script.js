@@ -1,3 +1,4 @@
+// album com animal e descricao
 function initTabNav() {
   const tabMenu = document.querySelectorAll('.js-tabmenu li');
   const tabContent = document.querySelectorAll('.js-tabcontent section');
@@ -21,6 +22,7 @@ function initTabNav() {
 }
 initTabNav();
 
+// adiciona efeito ao faq
 function initAccordion() {
   const accordionList = document.querySelectorAll('.js-accordion dt');
   const activeClass = 'ativo';
@@ -41,12 +43,13 @@ function initAccordion() {
 }
 initAccordion();
 
+// adiciona scrollSuave ao clicar no link do menu e ir até o elemento
 function initScrollSuave() {
   const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
 
   function scrollToSection(event) {
     event.preventDefault();
-    const href = event.currentTarget.getAttribute('href');
+    const href = event.currentTarget.getAttribute('href'); 
     const section = document.querySelector(href);
     section.scrollIntoView({
       behavior: 'smooth',
@@ -67,6 +70,7 @@ function initScrollSuave() {
 }
 initScrollSuave();
 
+// anima elemento ao movimentar o scroll
 function initAnimacaoScroll() {
   const sections = document.querySelectorAll('.js-scroll');
   if(sections.length) {
@@ -80,7 +84,6 @@ function initAnimacaoScroll() {
         // console.log(`innerWeight 50%: ${windowMetade}`);
         // console.log(`SectionTopBoundignClientRect: ${sectionTop}`);
         // console.log(`offsetTop: ${section.offsetTop}`);
-        // console.log(`scrollTop: ${section.scrollTop}`);
         // console.log(section.getBoundingClientRect());
         if(isSectionVisible)
           section.classList.add('ativo');
@@ -96,6 +99,23 @@ function initAnimacaoScroll() {
   }
 }
 initAnimacaoScroll();
+
+
+function métodosInterface(){
+  // initTabNav
+  // album com animal e descricao
+
+  // initAccordion
+  // adiciona efeito ao faq
+
+  // initScrollSuave
+  // adiciona scrollSuave ao clicar no link do menu e ir até o elemento
+
+
+  // initAnimacaoScroll
+  // anima elemento ao movimentar o scroll
+  // ao retirar a classe ele volta ao normal usando transition que executa as propriedadas css de forma devagar
+}
 
 
 
