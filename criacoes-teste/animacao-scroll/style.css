@@ -3,8 +3,8 @@
 }
 
 body{
-    height: 2000px;
-    padding-top: 1000px;
+    height: 5000px;
+    padding-top: 2000px;
 }
 
 .titulo{
@@ -40,13 +40,16 @@ body{
         display: flex;
         justify-content: flex-end;
         padding-right: 200px;
+
+        opacity: 0;
+        transform: translate3d(-2000px, 0, 0);
+        transition: 1s;
     }
         .js .js-icone-vantagem-ativo{
-            animation: vantagemIcon 1.5s forwards;
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
         }
-            .js .js-icone-vantagem-desativado{
-                animation: vantagemIconStatusOriginal 1.5s forwards;
-            }
+            
         .container-vantagem .icone-vantagem > div{
             width: 100px;
             height: 100px;
@@ -55,42 +58,15 @@ body{
     .container-vantagem > .descricao-vantagem{
         background-color: red;  
         
+        opacity: 0;
+        transform: translate3d(2000px, 0, 0);
+        transition: 1s;
     }
         .js .js-descricao-vantagem-ativo{
-            animation: vantagemDescricao 1.5s forwards;
-        }
-            .js .js-descricao-vantagem-desativado{
-                animation: vantagemDescricaoStatusOriginal 1.5s forwards;
-            }
-            
-@keyframes vantagemIcon{
-    from{
-        transform: translate3d(-2000px, 0, 0);
-    }to{
-        transform: translate3d(0, 0, 0);
-    }
-}
-    @keyframes vantagemIconStatusOriginal{
-        from{
+            opacity: 1;
             transform: translate3d(0, 0, 0);
-        }to{
-            transform: translate3d(-2000px, 0, 0);
         }
-    }
-@keyframes vantagemDescricao{
-    from{
-        transform: translate3d(2000px, 0, 0);
-    }to{
-        transform: translate3d(0, 0, 0);
-    }
-}
-    @keyframes vantagemDescricaoStatusOriginal{
-        from{
-            transform: translate3d(0, 0, 0);
-        }to{
-            transform: translate3d(2000px, 0, 0);
-        }
-    }
+
 @media only screen and (max-width: 800px) {
     .container-vantagem{
         display: block;
