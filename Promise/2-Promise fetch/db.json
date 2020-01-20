@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "name": "joaquim",
+      "age": 20
+    },
+    {
+      "name": "maik",
+      "age": 21
+    },
+    {
+      "name": "antonio",
+      "age": 22
+    },
+    {
+      "name": "paulo",
+      "age": 23
+    }
+  ],
+  "observacao": {
+    "liberado": false
+  }
+}
