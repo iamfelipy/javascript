@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cep-mensagem-erro {
+    padding: 10px;
+    color: red;
+}
+
+input {
+    border: none;
+    padding: 10px;
+    
+
+    font-size: 20pt;
+    color: gray;
+    text-align: center;
+}
+
+#cepUser {
+    border: none;
+    padding: 10px;
+    background-color: black;
+    
+    font-size: 20pt;
+    color: gray;
+    text-align: center;
+    
+    outline: 2px solid black;
+}
+
+input:focus {
+    
+}
