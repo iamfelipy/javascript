@@ -1,0 +1,27 @@
+
+body {
+    margin: 0;
+
+}
+
+.container-imagens {
+    min-height: 100vh;
+
+    background-image: url('./loading.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px 100px;
+}
+
+.imagens {
+    animation: showImageTransition 1s forwards;
+}
+
+@keyframes showImageTransition {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
