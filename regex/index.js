@@ -1,3 +1,29 @@
+const regexpTELEFONE = /([+]?\d{2})?\s?([(]?\d{2}[)]?)?\s?\d?\d{4}[ -]?\d{4}/;
+// const regexpTELEFONE = /([+]?\d{2})? \s? ([(]?\d{2}[)]?)? \s? \d? \d{4} [ -]? \d{4}/;
+const telefones = [
+  '+55 11 98888-8888',
+  '+55 11 98888 8888',
+  '+55 11 988888888',
+  '+55 11988888888',
+  '+5511988888888',
+  '5511988888888',
+  '11 98888-8888',
+  '11 98888 8888',
+  '(11) 98888 8888',
+  '(11) 98888-8888',
+  '11-98888-8888',
+  '11 98888 8888',
+  '11988888888',
+  '11988888888',
+  '988888888',
+  '(11)988888888',
+  '98888 8888',
+  '8888 8888'
+];
+
+for(telefone of telefones) {
+  console.log(telefone, telefone.match(regexpTELEFONE));
+}
 
 /*
     Anotações
@@ -48,105 +74,110 @@
 
 //exemplos:
 
-'JavaScript'.replace(/a/, 'B')
-'JavaScript'.replace(/Java/, 'Type')
-'JavaScript'.replace(/a/g, 'i')
-'Perdeu perdido'.replace(/Pe/gi, 'Ba')
-'JavaScript'.replace(/a/g, 'i')
-'JavaScript'.replace(/[ai]/gi, 'u');
-'111.222-333-44'.replace(/[-.]/g, '');
-'Brasil é com z: Brazil'.replace(/Bra[sz]il/g, 'Prazer');
-'JavaScript é a linguagem.'.replace(/[a-z]/g, '0');
-'JavaScript é a linguagem.'.replace(/[a-zA-Z]/g, '1');
-'123.333.333-33'.replace(/[0-9]/g, 'X');
-'Brasil é com z: Brazil'.replace(/[^a-z]/g, ' ');
-'JavaScript é a linguagem.'.replace(/./g, '0');
-'999.222.222.11'.replace(/\./g, '-');
-'Guarda-chuva R$ 23,00.'.replace(/\w/g, '-');
-'Guarda-chuva R$ 23,00.'.replace(/\W/g, '-');
-'+55 (21) 2222-2222'.replace(/\d/g, 'X');
-'+55 (21) 2222-2222'.replace(/\D/g, '');
-'+55 (21) 2222-  2222  '.replace(/\s/g, '');
-'+55 (21) 2222-  2222  '.replace(/\S/g, '');
-'Vaaaai ali por favor.'.replace(/aaaa/g, 'a');
-'Vaaaai ali por favor.'.replace(/a{4}/g, 'a');
-'222.333.222.42'.replace(/\d{2,3}/g, 'X');
-'A melhor linguagem é JavaScript'.replace(/\w{1,}/g, 'X');
-'222.333.222.42'.replace(/\d+/g, 'X');
-'Dígitos, dados, desenhos, Dito, d'.replace(/d\w+/g, 'X');
-'Dígitos, dados, desenhos, Dito, d'.replace(/d\w*/g, 'X');
-'Qual é o certo, regexp ou regex?'.replace(/regexp?/g, 'Regular Expression');
-'PHP e Java são linguagens diferentes'.replace(/java|php/gi, 'X');
-'Java não é JavaScript.'.replace(/java/gi, 'X');
-'Java não é JavaScript.'.replace(/\b\d+\b/gi, 'X');
-'O Restaurante25 na Rua 3, custa R$ 32,00'.replace(/\b\d+\b/gi, 'X');
-'11_22 33-44 55é66 77e88'.replace(/\b\d+\b/gi, 'X');
-`andre@origamid.com
-contato@origamid.com`.replace(/^\w+/g, 'X');
-`andre@origamid.com
-contato@origamid.com`.replace(/\w+$/g, 'X');
-`andre@origamid.com
-contato@origamid.com`.replace(/\w+$/gm, 'X');
-`andre@origamid.com
-contato@origamid.com`.replace(/^\w+/gm, 'X');
-`andre@origamid.com\ncontato@origamid.com`.replace(/\n/g, '---');
-`andre@origamid.com
-contato@origamid.com`.replace(/\n/g, 'X');
-'andre@origamid.com ©'.replace(/\u0040|\u00A9/g, '---');
-
-'JavaScript'.replace(/a/, 'B')
-// BavaScript
-'JavaScript'.replace(/Java/, 'Type')
-// TypeScript
-'JavaScript'.replace(/a/g, 'i')
-// JiviScript
-'Perdeu perdido'.replace(/Pe/gi, 'Ba')
-// Bardeu Bardido
-'JavaScript'.replace(/a/g, 'i')
-// JuvuScrupt
-
-'JavaScript'.replace(/[ai]/gi, 'u');
-'111.222-333-44'.replace(/[-.]/g, '');
-'Brasil é com z: Brazil'.replace(/Bra[sz]il/g, 'Prazer');
-'JavaScript é a linguagem.'.replace(/[a-z]/g, '0');
-'JavaScript é a linguagem.'.replace(/[a-zA-Z]/g, '1');
-'123.333.333-33'.replace(/[0-9]/g, 'X');
-'Brasil é com z: Brazil'.replace(/[^a-z]/g, ' ');
-'JavaScript é a linguagem.'.replace(/./g, '0');
-'999.222.222.11'.replace(/\./g, '-');
-'Guarda-chuva R$ 23,00.'.replace(/\w/g, '-');
-'Guarda-chuva R$ 23,00.'.replace(/\W/g, '-');
-'+55 (21) 2222-2222'.replace(/\d/g, 'X');
-'+55 (21) 2222-2222'.replace(/\D/g, '');
-'+55 (21) 2222-  2222  '.replace(/\s/g, '');
-'+55 (21) 2222-  2222  '.replace(/\S/g, '');
-'Vaaaai ali por favor.'.replace(/aaaa/g, 'a');
-'Vaaaai ali por favor.'.replace(/a{4}/g, 'a');
-'222.333.222.42'.replace(/\d{2,3}/g, 'X');
-'A melhor linguagem é JavaScript'.replace(/\w{1,}/g, 'X');
-'222.333.222.42'.replace(/\d+/g, 'X');
-'Dígitos, dados, desenhos, Dito, d'.replace(/d\w+/g, 'X');
-'Dígitos, dados, desenhos, Dito, d'.replace(/d\w*/g, 'X');
-'Qual é o certo, regexp ou regex?'.replace(/regexp?/g, 'Regular Expression');
-'PHP e Java são linguagens diferentes'.replace(/java|php/gi, 'X');
-'Java não é JavaScript.'.replace(/java/gi, 'X');
-'Java não é JavaScript.'.replace(/\b\d+\b/gi, 'X');
-'O Restaurante25 na Rua 3, custa R$ 32,00'.replace(/\b\d+\b/gi, 'X');
-'11_22 33-44 55é66 77e88'.replace(/\b\d+\b/gi, 'X');
-`andre@origamid.com
-contato@origamid.com`.replace(/^\w+/g, 'X');
-`andre@origamid.com
-contato@origamid.com`.replace(/\w+$/g, 'X');
-`andre@origamid.com
-contato@origamid.com`.replace(/\w+$/gm, 'X');
-`andre@origamid.com
-contato@origamid.com`.replace(/^\w+/gm, 'X');
-`andre@origamid.com\ncontato@origamid.com`.replace(/\n/g, '---');
-`andre@origamid.com
-contato@origamid.com`.replace(/\n/g, 'X');
-'andre@origamid.com ©'.replace(/\u0040|\u00A9/g, '---');
+// 'JavaScript'.replace(/J/, 'B')
+// // BavaScript
+// 'JavaScript'.replace(/Java/, 'Type')
+// // TypeScript
+// 'JavaScript'.replace(/a/g, 'i')
+// // JiviScript
+// 'Perdeu perdido'.replace(/Pe/gi, 'Ba')
+// // Bardeu Bardido
+// 'JavaScript'.replace(/[ai]/gi, 'u');
+// // JuvuScrupt
+// '111.222-333-44'.replace(/[-.]/g, '');
+// // 11122233344
+// 'Brasil é com z: Brazil'.replace(/Bra[sz]il/g, 'Prazer');
+// // Prazer é com z: Prazer
+// 'JavaScript é a linguagem.'.replace(/[a-z]/g, '0');
+// // J000S00000 é 0 000000000.
+// 'JavaScript é a linguagem.'.replace(/[a-zA-Z]/g, '1');
+// // 1111111111 é 1 111111111.
+// '123.333.333-33'.replace(/[0-9]/g, 'X');
+// // XXX.XXX.XXX-XX
+// 'Brasil é com z: Brazil'.replace(/[^a-z]/g, ' ');
+// // rasil   com z   razil 
+// 'JavaScript é a linguagem.'.replace(/./g, '0');
+// // 0000000000000000000000000
+// '999.222.222.11'.replace(/\./g, '-');
+// // 999-222-222-11
+// 'Guarda-chuva R$ 23,00.'.replace(/\w/g, '-');
+// // ------------ -$ --,--.
+// 'Guarda-chuva R$ 23,00.'.replace(/\W/g, '-');
+// // Guarda-chuva-R--23-00-
+// '+55 (21) 2222-2222'.replace(/\d/g, 'X');
+// // +XX (XX) XXXX-XXXX.
+// '+55 (21) 2222-2222'.replace(/\D/g, '');
+// // 552122222222
+// '+55 (21) 2222-  2222  '.replace(/\s/g, '');
+// // +55(21)2222-2222
+// '+55 (21) 2222-  2222  '.replace(/\S/g, 'X');
+// // XXX XXXX XXXXX  XXXX
+// 'Vaaaai ali por favor.'.replace(/aaaa/g, 'a');
+// // Vai ali por favor.  
+// 'Vaaaai ali por favor.'.replace(/a{4}/g, 'a');
+// // Vai ali por favor.  
+// '222.333.222.42'.replace(/\d{2,3}/g, 'X');
+// // X.X.X.X
+// 'A melhor linguagem é JavaScript'.replace(/\w{1,}/g, 'X');
+// // X X X é X
+// '222.333.222.42'.replace(/\d+/g, 'X');
+// // X.X.X.X
+// 'Dígitos, dados, desenhos, Dito, d'.replace(/d\w+/g, 'X');
+// // Dígitos, X, X, Dito, d
+// 'Dígitos, dados, desenhos, Dito, d'.replace(/d\w*/g, 'X');
+// // Dígitos, X, X, Dito, X
+// 'Qual é o certo, regexp ou regex?'.replace(/regexp?/g, 'Regular Expression');
+// // Qual é o certo, Regular Expression ou Regular Expression?
+// 'PHP e Java são linguagens diferentes'.replace(/java|php/gi, 'X');
+// // X e X são linguagens diferente
+// 'Java não é JavaScript.'.replace(/java/gi, 'X');
+// // X não é XScript.
+// 'Java não é JavaScript.'.replace(/\b\d+\b/gi, 'X');
+// // X não é JavaScript.
+// 'O Restaurante25 na Rua 3, custa R$ 32,00'.replace(/\b\d+\b/gi, 'X');
+// // O Restaurante25 na Rua X, custa R$ X,X
+// '11_22 33-44 55é66 77e88'.replace(/\b\d+\b/gi, 'X');
+// // 11_22 X-X XéX 77e88
+// `andre@origamid.com
+// contato@origamid.com`.replace(/^\w+/g, 'X');
+// // X@origamid.com
+// // contato@origamid.com
+// `andre@origamid.com
+// contato@origamid.com`.replace(/\w+$/g, 'X');
+// // andre@origamid.com
+// // contato@origamid.X
+// `andre@origamid.com
+// contato@origamid.com`.replace(/\w+$/gm, 'X');
+// // andre@origamid.X
+// // contato@origamid.X
+// `andre@origamid.com
+// contato@origamid.com`.replace(/^\w+/gm, 'X');
+// // X@origamid.com
+// // X@origamid.com
+// `andre@origamid.com\ncontato@origamid.com`.replace(/\n/g, '---');
+// // andre@origamid.com---contato@origamid.com
+// `andre@origamid.com
+// contato@origamid.com`.replace(/\n/g, 'X');
+// // andre@origamid.com---contato@origamid.com
+// 'andre@origamid.com ©'.replace(/\u0040|\u00A9/g, '---');
+// // andre---origamid.com ---
 
 
+// Números inteiros (postivos ou negativos):
+// ^-?\d+$
+//Números inteiros positivos:
+// ^\d+$
+// Números inteiros negativos:
+// ^-\d+$
+// Números (postivos ou negativos):
+// ^-?\d*[.,]?\d*$
+// Números positivos:
+// ^\d+[.,]?\d+$
+
+/*
+    regex úteis:
+    https://www.mundojs.com.br/2018/07/05/expressoes-regulares-para-o-dia-a-dia/#page-content
+*/
 
 
 
