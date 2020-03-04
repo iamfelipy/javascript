@@ -1,0 +1,16 @@
+{
+  "name": "myfirtspackage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "anotacoes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "'Felipy Camargo'",
+  "license": "ISC",
+  "dependencies": {
+    "cowsay": "^1.4.0",
+    "eslint": "^6.8.0",
+    "lodash": "^4.17.15"
+  }
+}
