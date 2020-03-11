@@ -11,7 +11,7 @@
     .exitclear
     npm -v
     npm -h
-    npm init
+    npm init -y
     npm install
     npm i eslint -g
     npm unistall lodash
