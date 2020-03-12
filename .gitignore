@@ -1,3 +1,5 @@
 teste/
 .vs/
 automacao-front-end/webpack-tutorial/node_modules
+automacao-front-end/node_modules
+node_modules/
