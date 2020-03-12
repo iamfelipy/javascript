@@ -7,20 +7,23 @@
 
     cli
     npm install lodash
-    node
-    .exitclear
     npm -v
     npm -h
     npm init -y
     npm install
-    npm i eslint -g
     npm unistall lodash
+    npm i eslint -g
+    npm i webpack --save-dev
     npm update lodash
-    npm i -D webpack webpack-cli
-    npm install --save-dev
+    npm unistall lodash
+    package.json "private": "true" impede que seja publicado no npm online
+    
+    
+
 */
 
 /*
     https://medium.com/jeremy-keeshin/hello-world-for-javascript-with-npm-modules-in-the-browser-6020f82d1072
     https://www.webdevdrops.com/webpack-sem-medo-introducao-af889eb659e7/
+    
 */ 
