@@ -17,5 +17,6 @@ https://js.checkio.org/
 https://www.hackerrank.com/
 https://www.codewars.com/
 https://tableless.com.br/primeiros-passos-fullstack-javascript/
+https://www.keycdn.com/blog/web-development-tools
 
 

@@ -17,6 +17,8 @@
     npm update lodash
     npm unistall lodash
     package.json "private": "true" impede que seja publicado no npm online
+    npm uninstall babel-cli --save-dev
+
     
     
 

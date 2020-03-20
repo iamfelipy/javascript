@@ -26,7 +26,7 @@
     else
       reject('foi embora');
   } );
-  .then((resolvida)=>{}).cath((rejeitada)=>{})
+  .then((resolvida)=>{}).catch((rejeitada)=>{})
   .then((resolvida)=>{},(rejeitada)=>{})
   .then().then().then().catch()
   .finally(()=>{
