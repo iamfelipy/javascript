@@ -11,13 +11,14 @@
     npm -h
     npm init -y
     npm install
-    npm unistall lodash
     npm i eslint -g
-    npm i webpack --save-dev
+    npm i --save-dev webpack webpack-cli
     npm update lodash
     npm unistall lodash
     package.json "private": "true" impede que seja publicado no npm online
     npm uninstall babel-cli --save-dev
+    node_modules/.bin/eslint script.js 'executar localmente'
+    npx eslint 'alias para node_modules/.bin/eslint'
 
     
     
